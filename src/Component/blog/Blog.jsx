@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import post2 from '../../img/post2.webp'
+import post3 from '../../img/post3.webp'
+import './blog.css'
 
 const Blog = () => {
     const [description, setDescription] = useState('');
@@ -31,16 +33,36 @@ const Blog = () => {
 
     return (
             <div className="container">
-                <div className="row">
-                    <div className="col-md-2">
-                        {/* <img src={post2} alt="" className='img-fluid' /> */}
+                <div className="row mt-3">
+                    <div className="col-md">
+                        <h4 className='fw-bold'>CAN 2024: Sénégal-Côte d’Ivoire, Nigeria-Cameroun, Mali-Burkina, voici le calendrier des huitièmes</h4>
+                        <p>La phase de groupe de la CAN 2024 a pris fin ce mercredi 24 janvier et on connaît désormais les 16 pays qualifiés
+                             pour les huitièmes de finale de la CAN 2024. Le miracle ivoirien a eu lieu et les Éléphants se 
+                            sont qualifiés grâce à la défaite de la Zambie face au Maroc (0-1) Mais la Côte d’Ivoire, qui a limogé son 
+                            sélectionneur ce mercredi, va devoir faire beaucoup mieux que lors du premier tour pour réussir l’exploit de 
+                            sortir le Sénégal, champion d’Afrique en titre et intraitable depuis le début de la CAN avec trois victoires
+                             en trois matches.
+
+                            Le choc Nigeria-Cameroun vaudra également le détour entre deux équipes se sont croisées 
+                            au même stade de la compétition à la CAN 2019 en 
+                            Égypte. Les Super eagles étaient sortis vainqueurs du duel (3-2).
+
+                            Épatante au premier tour, la Guinée équatoriale, avec le meilleur buteur de la
+                             compétition, Emilio Nsue (5 buts), affrontera la Guinée et voudra rester sur sa 
+                             lancée du premier tour....</p>
+                        <img src={post3} alt="" className='img-fluid' />
+
+                              <p>Publié le : 24/01/2024 - 23:03</p>
+
                     </div>
-                        <div className="col-md-10 mt-3 p-3">
-                        <div className="d-flex gap-4 shadow">
+                    <div className="col-md-5">
+                        <div className="shadow-sm mt-3 p-2">
+                            <div className="text-center">
+                            <h5>mettez vos posts</h5>
+                            </div>
+                        <form className='form mt-3' onSubmit={handleFormSubmit}>
                         <img src={post2} alt="" className='img-fluid' />
-                        <form className='form' onSubmit={handleFormSubmit}>
-                            <h2>mettez votre post</h2>
-                            <div className="mb-3">
+                            <div className="mb-3 mt-2">
                                 <label htmlFor="title">Title</label>
                                 <input
                                     type="text"
@@ -60,7 +82,7 @@ const Blog = () => {
                                 ></textarea>
                             </div>
                             <div className="mb-3">
-                                <button type="submit" className='btn btn-info'>Poster</button>
+                                <button type="submit" className='btn btn-post'>Poster</button>
                             </div>
                         </form>
                     </div>
