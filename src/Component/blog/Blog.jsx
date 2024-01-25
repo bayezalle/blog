@@ -58,7 +58,7 @@ const Blog = () => {
                     <div className="col-md-5">
                         <div className="shadow-sm mt-3 p-2">
                             <div className="text-center">
-                            <h5>mettez vos posts</h5>
+                            <h5 className='fw-bold'>Mettez vos posts</h5>
                             </div>
                         <form className='form mt-3' onSubmit={handleFormSubmit}>
                         <img src={post2} alt="" className='img-fluid' />
